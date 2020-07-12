@@ -1,1 +1,20 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:9090/eureka
+    register-with-eureka: true
+    fetch-registry: true  
 
+
+microservice:
+  client1:
+    endpoints:
+      endpoint:
+        uri1: http://CLIENT1/client1/client1EndPoint
+        uri2: http://CLIENT2/client1/client2EndPoint
+  client2:
+    endpoints:
+      endpoint:
+        uri1: http://CLIENT2/client12/client1EndPoint
